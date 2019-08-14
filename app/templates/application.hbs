@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<h1>Element ID Error</h1>
+
+<p>As soon as you start typing in the `input` field, you will get an error in the console log.</p>
+<p>The error doesn't happen if you're not binding the `@value` to the `input`.</p>
+<p>This error was introduced when upgrading to Ember 3.11 from Ember 3.10.</p>
+
+<h3>Input that throws an error</h3>
+<XForm as |Form|>
+  <Form.label>My Label</Form.label>
+  <Form.input @value={{this.name}} />
+</XForm>
+
+<h3>Input that does not throw an error</h3>
+<XForm as |Form|>
+  <Form.label>My Label</Form.label>
+  <Form.input />
+</XForm>
 
 {{outlet}}

@@ -1,0 +1,9 @@
+<form>
+  {{yield
+    (
+      hash
+        label=(component "x-label" for=uniqueId)
+        input=(component "x-input" elementId=uniqueId)
+    )
+  }}
+</form>
